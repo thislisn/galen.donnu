@@ -1,5 +1,6 @@
 @import header.spec
 @import footer.spec
+@import galen-extras/galen-extras-rules.gspec
 
 @objects
     stud-rada-slide    xpath    //rs-slide[@data-title='Студентська рада']
@@ -9,8 +10,9 @@
         box-*          css      section.vc_cta3-container
         column-*       css      .wpb_column.vc_col-sm-12 div.wpb_column.vc_col-sm-4
 
-
-
+@groups
+    (box, boxes)       team.box-*
+    (column, columns)  team.column-*
 
 = Content =
     = studrada =
@@ -38,9 +40,8 @@
         = team =
 
     @on *
-        global:
-            count any team.box-* is 9
-            count any team.column-* is 3
+        | amount of visible &boxes should be 9
+        | amount of visible &columns should be 3
         @for [1 - 3] as index
                 team.box-${index}:
                     inside team.column-1

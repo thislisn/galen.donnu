@@ -16,7 +16,6 @@
             width 69px
             height 69px
 
-
     @on desktop
         global:
             count any header.menu-item-* is 13

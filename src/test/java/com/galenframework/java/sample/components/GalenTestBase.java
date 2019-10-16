@@ -10,11 +10,16 @@ import org.testng.annotations.DataProvider;
 
 import java.io.File;
 
-import static java.util.Arrays.asList;
+import static java.lang.String.format;
+import static java.lang.System.*;
+import static java.util.Collections.singletonList;
 
 public abstract class GalenTestBase extends GalenTestNgTestBase {
 
-    private static final String ENV_URL = "https://www.donnu.edu.ua/uk/";
+    private static final String LOCAL_PATH = "\\app\\%s\\%s\\%s\\index.html";
+    private static final String URL = "www.donnu.edu.ua";
+    private static final String URL_MASK = "/%s/%s";
+    private static final String HTTPS = "https://";
 
     @BeforeSuite
     public void deleteReport() {
@@ -37,16 +42,20 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
         return driver;
     }
 
-    public void load(String uri) {
-        getDriver().get(ENV_URL + uri);
+    protected String getLocalURL(String local, String uri) {
+        return getProperty("user.dir").concat(format(LOCAL_PATH, URL, local, uri));
+    }
+
+    protected String getProductionURL(String local, String uri){
+        return HTTPS.concat(URL).concat(format(URL_MASK, local, uri));
     }
 
     @DataProvider(name = "devices")
     public Object[][] devices() {
         return new Object[][]{
-                {new TestDevice("mobile", new Dimension(450, 800), asList("mobile"))},
-                {new TestDevice("tablet", new Dimension(750, 800), asList("tablet"))},
-                {new TestDevice("desktop", new Dimension(1024, 800), asList("desktop"))}
+                {new TestDevice("mobile", new Dimension(450, 800), singletonList("mobile"))},
+                {new TestDevice("tablet", new Dimension(750, 800), singletonList("tablet"))},
+                {new TestDevice("desktop", new Dimension(1024, 800), singletonList("desktop"))}
         };
     }
 }
