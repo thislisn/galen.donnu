@@ -16,10 +16,9 @@ import static java.util.Collections.singletonList;
 
 public abstract class GalenTestBase extends GalenTestNgTestBase {
 
-    private static final String LOCAL_PATH = "\\app\\%s\\%s\\%s\\index.html";
+    private static final String LOCAL_PATH_MASK = "\\app\\%s\\%s\\%s\\index.html";
     private static final String URL = "www.donnu.edu.ua";
-    private static final String URL_MASK = "/%s/%s";
-    private static final String HTTPS = "https://";
+    private static final String URL_MASK = "https://%s/%s/%s";
 
     @BeforeSuite
     public void deleteReport() {
@@ -43,11 +42,11 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
     }
 
     protected String getLocalURL(String local, String uri) {
-        return getProperty("user.dir").concat(format(LOCAL_PATH, URL, local, uri));
+        return getProperty("user.dir").concat(format(LOCAL_PATH_MASK, URL, local, uri));
     }
 
     protected String getProductionURL(String local, String uri){
-        return HTTPS.concat(URL).concat(format(URL_MASK, local, uri));
+        return format(URL_MASK, URL, local, uri);
     }
 
     @DataProvider(name = "devices")

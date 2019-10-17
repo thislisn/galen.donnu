@@ -1,3 +1,4 @@
+@import galen-extras/galen-extras-rules.gspec
 
 @objects
     header              header.site-header.main-header
@@ -6,6 +7,10 @@
         menu            .menu
             lang-logo-* .lang-item
         menu-item-*     .menu > .menu-item
+
+@groups
+    (menu-item, menu-items)  header.menu-item-*
+    (lang-logo, lang-logos)  header.menu.lang-logo-*
 
 = Content =
     = header =
@@ -17,9 +22,8 @@
             height 69px
 
     @on desktop
-        global:
-            count any header.menu-item-* is 13
-            count any header.menu.lang-logo-* is 2
+        | amount of visible &menu-items should be 13
+        | amount of visible &lang-logos should be 2
         header.menu:
             inside header ~ 15px top, ~ 166px left
         @forEach [header.menu.lang.logo-*] as itemName, next as nextItem
