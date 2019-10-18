@@ -53,12 +53,8 @@
                     inside team.column-3
 
     @on desktop
-        @forEach [team.column-*] as itemName, next as nextItem
-                ${itemName}:
-                    left-of ${nextItem} ~ 0px
+        | &columns are placed next to each other with ~ 0px margin
 
     @on tablet, mobile
-        @forEach [team.column-*] as itemName, next as nextItem
-                        ${itemName}:
-                            above ${nextItem} ~ 1px
+        | &columns are placed above each other with ~ 1px margin
 

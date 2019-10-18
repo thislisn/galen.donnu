@@ -15,40 +15,32 @@
 = Content =
     = header =
     @on *
+        | header.ham should be visible on mobile, tablet but absent on desktop
         header:
             centered horizontally inside screen
         header.donnu-logo:
-            width 69px
-            height 69px
+            | squared with ~ 69px size
 
     @on desktop
         | amount of visible &menu-items should be 13
         | amount of visible &lang-logos should be 2
+        | &lang-logos are placed above each other with ~ 52px margin
         header.menu:
             inside header ~ 15px top, ~ 166px left
-        @forEach [header.menu.lang.logo-*] as itemName, next as nextItem
-                ${itemName}:
-                    above ${nextItem} ~ 52px
         @for [1 - 5] as index
                 header.menu-item-${index}:
                     above header.menu-item-${index + 5} ~ 0px
         @for [1 - 4, 6 - 9] as index
                 header.menu-item-${index}:
                     left-of header.menu-item-${index + 1} ~ 0px
-        header.ham:
-            absent
 
 
     @on tablet
-        header.ham:
-            inside header ~ 48px top, ~ 69px right
-        header.donnu-logo:
-            inside header ~ 15px top, ~ 57px left
+        | header.ham should be located at the right inside header with ~69px margin
+        | header.donnu-logo should be located at the left inside header with ~57px margin
 
     @on mobile
-        header.ham:
-            inside header ~ 48px top, ~ 50px right
-        header.donnu-logo:
-            inside header ~ 15px top, ~ 38px left
+        | header.ham should be located at the right inside header with ~50px margin
+        | header.donnu-logo should be located at the left inside header with ~38px margin
 
 

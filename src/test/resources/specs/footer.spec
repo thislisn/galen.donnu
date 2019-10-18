@@ -1,3 +1,4 @@
+@import galen-extras/galen-extras-rules.gspec
 
 @objects
     footer                     footer#footer
@@ -12,6 +13,9 @@
                 logo-*         i
                 name-*         span
             copyrights         .copyrights p
+
+@groups
+    (widget-title, widget-titles)       footer.widgets.widget-title-*
 
 = Content =
     = footer =
@@ -53,8 +57,5 @@
     @on tablet, mobile
         footer.widgets.text-widget.img:
             inside footer.widgets ~ 315px top, ~ 0px left
-        @forEach [footer.widgets.widget-title-*] as itemName, next as nextItem
-                 ${itemName}:
-                      above ${nextItem} 131 to 392px
-                      inside footer.widgets ~ 0px left
+        | &widget-titles are placed above each other with 131 to 392px margin
 
