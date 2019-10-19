@@ -7,17 +7,17 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class DesignTest extends GalenTestBase {
-
-    @Test(dataProvider = "devices")
-    public void checkLayoutLocal(TestDevice device) throws IOException {
-        load(getLocalURL("uk", "studentska-rada"));
-        checkLayout("/specs/studRada.spec", device.getTags());
-    }
+public class DesignTestProductions extends GalenTestBase {
 
     @Test(dataProvider = "devices")
     public void checkLayoutProduction(TestDevice device) throws IOException {
         load(getProductionURL("uk", "studentska-rada"));
+        checkLayout("/specs/studRada.spec", device.getTags());
+    }
+
+    @Test(dataProvider = "devices")
+    public void checkLayoutProductionEn(TestDevice device) throws IOException {
+        load(getProductionURL("en", "student-council"));
         checkLayout("/specs/studRada.spec", device.getTags());
     }
 

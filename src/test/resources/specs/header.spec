@@ -16,8 +16,6 @@
     = header =
     @on *
         | header.ham should be visible on mobile, tablet but absent on desktop
-        header:
-            centered horizontally inside screen
         header.donnu-logo:
             | squared with ~ 69px size
 
@@ -33,7 +31,6 @@
         @for [1 - 4, 6 - 9] as index
                 header.menu-item-${index}:
                     left-of header.menu-item-${index + 1} ~ 0px
-
 
     @on tablet
         | header.ham should be located at the right inside header with ~69px margin
