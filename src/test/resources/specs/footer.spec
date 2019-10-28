@@ -26,6 +26,8 @@
         footer.widgets.text-widget.img:
              height 119px
              width  127px
+        footer.bottom.copyrights:
+            text matches ".* Донецький національний університет імені Василя Стуса"
 
         = bottom =
 
