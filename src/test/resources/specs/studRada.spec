@@ -16,6 +16,10 @@
 
 = Content =
     = studrada =
+    @on *
+        stud-rada-slide:
+            width 100% of screen/width
+            aligned vertically all header
 
     @on desktop
         stud-rada-slide.img:
@@ -23,13 +27,11 @@
         stud-rada-slide.text:
             inside stud-rada-slide ~ 218px top, ~ 0px left
 
-
     @on tablet
         stud-rada-slide.img:
             inside stud-rada-slide ~ 92px top, ~ 1px right
         stud-rada-slide.text:
             inside stud-rada-slide ~ 248px top, ~ 17px left
-
 
     @on mobile
         stud-rada-slide.img:

@@ -15,6 +15,8 @@
 = Content =
     = header =
     @on *
+        header:
+             width 100% of screen/width
         | header.ham should be visible on mobile, tablet but absent on desktop
         header.donnu-logo:
             | squared with ~ 69px size
