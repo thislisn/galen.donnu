@@ -3,9 +3,9 @@
 @import galen-extras/galen-extras-rules.gspec
 
 @objects
-    stud-rada-slide    xpath    //rs-slide[@data-title='Студентська рада']
+    stud-rada-slide    xpath    //rs-slide[@data-title='Студентська рада'] | //rs-slide[@data-title='Student Council']
         img            css      img
-        text           css      #slider-56-slide-7172-layer-1
+        text           id       slider-56-slide-7172-layer-1
     team               xpath    //section[@class='vc_cta3-container']/ancestor::div[@class='vc-row-container container']
         box-*          css      section.vc_cta3-container
         column-*       css      .wpb_column.vc_col-sm-12 div.wpb_column.vc_col-sm-4
@@ -18,7 +18,7 @@
     = studrada =
     @on *
         stud-rada-slide:
-            width 100% of screen/width
+            width 94 to 100% of screen/width
             aligned vertically all header
 
     @on desktop

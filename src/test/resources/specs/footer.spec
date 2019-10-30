@@ -22,7 +22,7 @@
 
      @on *
         footer:
-             width 100% of screen/width
+             width 94 to 100% of screen/width
         footer.bottom, footer.widgets:
              centered horizontally inside footer
         footer.widgets.text-widget.img:
