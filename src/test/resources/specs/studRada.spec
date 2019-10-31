@@ -1,5 +1,5 @@
-@import header.spec
-@import footer.spec
+@import header_main.spec
+@import footer_main.spec
 @import galen-extras/galen-extras-rules.gspec
 
 @objects

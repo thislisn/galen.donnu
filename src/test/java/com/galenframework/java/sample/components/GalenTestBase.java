@@ -2,6 +2,7 @@ package com.galenframework.java.sample.components;
 
 import com.galenframework.testng.GalenTestNgTestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.AllArgsConstructor;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +18,6 @@ import static java.util.Collections.singletonList;
 public abstract class GalenTestBase extends GalenTestNgTestBase {
 
     private static final String LOCAL_PATH_MASK = "\\app\\%s\\%s\\%s\\index.html";
-    private static final String URL = "www.donnu.edu.ua";
     private static final String URL_MASK = "https://%s/%s/%s";
 
     @BeforeSuite
@@ -41,12 +41,12 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
         return driver;
     }
 
-    protected String getLocalURL(String local, String uri) {
-        return getProperty("user.dir").concat(format(LOCAL_PATH_MASK, URL, local, uri));
+    protected String getLocalUrl(LOCAL local, String uri, Domain domain) {
+        return getProperty("user.dir").concat(format(LOCAL_PATH_MASK, domain.name, local.name, uri));
     }
 
-    protected String getProductionURL(String local, String uri){
-        return format(URL_MASK, URL, local, uri);
+    protected String getProductionUrl(LOCAL local, String uri, Domain domain){
+        return format(URL_MASK, domain.name, local.name, uri);
     }
 
     @DataProvider(name = "devices")
@@ -56,5 +56,31 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
                 {new TestDevice("tablet", new Dimension(750, 800), singletonList("tablet"))},
                 {new TestDevice("desktop", new Dimension(1024, 800), singletonList("desktop"))}
         };
+    }
+
+    @AllArgsConstructor
+    public enum Domain {
+        MAIN("www.donnu.edu.ua"),
+        SCIENCE("science.donnu.edu.ua");
+
+        private final String name;
+
+        @Override
+        public String toString() {
+            return name;
+        }
+    }
+
+    @AllArgsConstructor
+    public enum LOCAL {
+        EN("en"),
+        UA("uk");
+
+        private final String name;
+
+        @Override
+        public String toString() {
+            return name;
+        }
     }
 }
