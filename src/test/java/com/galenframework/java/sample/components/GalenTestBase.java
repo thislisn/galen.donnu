@@ -18,6 +18,7 @@ import static java.util.Collections.singletonList;
 public abstract class GalenTestBase extends GalenTestNgTestBase {
 
     private static final String LOCAL_PATH_MASK = "\\app\\%s\\%s\\%s\\index.html";
+    public static final String SPEC_PATH_MASK = "/specs/%s.spec";
     private static final String URL_MASK = "https://%s/%s/%s";
 
     @BeforeSuite
