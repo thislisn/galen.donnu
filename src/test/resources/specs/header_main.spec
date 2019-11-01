@@ -24,9 +24,9 @@
     @on desktop
         | amount of visible &menu-items should be 13
         | amount of visible &lang-logos should be 2
-        | &lang-logos are placed above each other with ~ 52px margin
+        | &lang-logos are placed above each other with ~ 29px margin
         header.menu:
-            inside header ~ 15px top, ~ 166px left
+            inside header ~ 15px top, ~ 197px left
         @for [1 - 5] as index
                 header.menu-item-${index}:
                     above header.menu-item-${index + 5} ~ 0px

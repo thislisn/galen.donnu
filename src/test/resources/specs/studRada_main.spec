@@ -3,9 +3,9 @@
 @import galen-extras/galen-extras-rules.gspec
 
 @objects
-    stud-rada-slide    xpath    //rs-slide[@data-title='Студентська рада'] | //rs-slide[@data-title='Student Council']
+    stud-rada-slide    xpath    //rs-slide
         img            css      img
-        text           id       slider-56-slide-7172-layer-1
+        text           xpath    //rs-layer-wrap[@class='rs-parallax-wrap']//rs-layer
     team               xpath    //section[@class='vc_cta3-container']/ancestor::div[@class='vc-row-container container']
         box-*          css      section.vc_cta3-container
         column-*       css      .wpb_column.vc_col-sm-12 div.wpb_column.vc_col-sm-4
@@ -23,9 +23,9 @@
 
     @on desktop
         stud-rada-slide.img:
-            inside stud-rada-slide ~ 97px top, ~ 1px right
+            inside stud-rada-slide ~ 100px top, ~ 55px right
         stud-rada-slide.text:
-            inside stud-rada-slide ~ 218px top, ~ 0px left
+            inside stud-rada-slide ~ 225px top, ~ 53px left
 
     @on tablet
         stud-rada-slide.img:

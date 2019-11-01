@@ -55,7 +55,7 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
         return new Object[][]{
                 {new TestDevice("mobile", new Dimension(450, 800), singletonList("mobile"))},
                 {new TestDevice("tablet", new Dimension(750, 800), singletonList("tablet"))},
-                {new TestDevice("desktop", new Dimension(1024, 800), singletonList("desktop"))}
+                {new TestDevice("desktop", new Dimension(1280, 800), singletonList("desktop"))}
         };
     }
 

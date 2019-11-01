@@ -23,8 +23,8 @@
     @on desktop
         mobile-menu-icon:
             absent
-        | amount of visible &menu-items should be 7
-        | amount of visible &menus-with-submenu should be 5
+        | amount of visible &menu-items should be 8
+        | amount of visible &menus-with-submenu should be 6
         | header.logo should be located at the left inside header with ~33px margin
         | header.search should be located at the right inside header with ~30px margin
         | &menu-items are placed next to each other with ~ 3px margin

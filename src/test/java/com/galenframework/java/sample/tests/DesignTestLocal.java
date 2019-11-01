@@ -14,25 +14,25 @@ public class DesignTestLocal extends GalenTestBase {
     @Test(dataProvider = "devices")
     public void checkLayoutLocalUkMain(TestDevice device) throws IOException {
         load(getLocalUrl(LOCAL.UA, "studentska-rada", Domain.MAIN));
-        checkLayout(format(SPEC_PATH_MASK, "studRada"), device.getTags());
+        checkLayout(format(SPEC_PATH_MASK, "studRada_main"), device.getTags());
     }
 
     @Test(dataProvider = "devices")
     public void checkLayoutLocalEnMain(TestDevice device) throws IOException {
         load(getLocalUrl(LOCAL.EN, "student-council", Domain.MAIN));
-        checkLayout(format(SPEC_PATH_MASK, "studRada"), device.getTags());
+        checkLayout(format(SPEC_PATH_MASK, "studRada_main"), device.getTags());
     }
 
     @Test(dataProvider = "devices")
     public void checkLayoutLocalUkScience(TestDevice device) throws IOException {
         load(getLocalUrl(LOCAL.UA, "pro-donnu", Domain.SCIENCE));
-        checkLayout(format(SPEC_PATH_MASK, "header_science"), device.getTags());
+        checkLayout(format(SPEC_PATH_MASK, "about_science"), device.getTags());
     }
 
     @Test(dataProvider = "devices")
     public void checkLayoutLocalEnScience(TestDevice device) throws IOException {
         load(getLocalUrl(LOCAL.EN, "about-donnu", Domain.SCIENCE));
-        checkLayout(format(SPEC_PATH_MASK, "header_science"), device.getTags());
+        checkLayout(format(SPEC_PATH_MASK, "about_science"), device.getTags());
     }
 
 }
