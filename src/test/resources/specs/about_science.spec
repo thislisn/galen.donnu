@@ -1,4 +1,5 @@
-
+@import header_science.spec
+@import footer_science.spec
 @import galen-extras/galen-extras-rules.gspec
 
 @objects
@@ -37,14 +38,17 @@
         above body.about_donnu_block.img ~ 54px
 
     @on tablet
-      body.about_donnu_block.title:
-        above body.about_donnu_block.img ~ 59px
       body.about_donnu_block.img:
         height 559px
         width 575px
-      | &text-blocks are placed above each other with ~ 60px margin
-
 
     @on mobile
+      body.about_donnu_block.img:
+        height 375px
+        width 386px
 
+    @on tablet, mobile
+      body.about_donnu_block.title:
+        above body.about_donnu_block.img ~ 59px
+      | &text-blocks are placed above each other with ~ 60px margin
 
