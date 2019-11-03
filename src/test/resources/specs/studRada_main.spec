@@ -55,7 +55,7 @@
                     inside team.column-3
 
     @on desktop
-        | &columns are placed next to each other with ~ 0px margin
+        | &columns are placed next to each other with ${no_margin}
 
     @on tablet, mobile
         | &columns are placed above each other with ~ 1px margin

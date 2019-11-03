@@ -11,7 +11,7 @@
         ham                 css #et_mobile_nav_menu .mobile_menu_bar
 
 @groups
-    (menu-item, menu-items)                     header.menu-item-*
+    (head-menu-item, head-menu-items)           header.menu-item-*
     (menu-with-submenu, menus-with-submenu)     header.menu-with-submenu-*
 
 = Content =
@@ -23,11 +23,11 @@
     @on desktop
         mobile-menu-icon:
             absent
-        | amount of visible &menu-items should be 8
+        | amount of visible &head-menu-items should be 8
         | amount of visible &menus-with-submenu should be 6
         | header.logo should be located at the left inside header with ~33px margin
         | header.search should be located at the right inside header with ~30px margin
-        | &menu-items are placed next to each other with ~ 3px margin
+        | &head-menu-items are placed next to each other with ~ 3px margin
         header.logo:
              height 74px
              width 174px

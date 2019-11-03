@@ -17,6 +17,9 @@
 @groups
     (widget-title, widget-titles)       footer.widgets.widget-title-*
 
+@set
+    no_margin   ~ 0px margin
+
 = Content =
     = footer =
 

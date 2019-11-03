@@ -12,24 +12,24 @@
             search        id  searchform
             archive       css h4.widgettitle
             nav_menu      css .widget_nav_menu
-            menu-item-*   css #menu-main-menu >.menu-item
+            menu-item-*   css .menu > .menu-item
 
 @groups
     (text-block, text-blocks)  body.about_donnu_block.text-block-*
-    (menu-item, menu-items)  body.menu.menu-item-*
+    (nav-menu-item, nav-menu-items)  body.menu.menu-item-*
 
 = Content =
     @on *
       | amount of visible &text-blocks should be 2
 
     @on desktop
-      | amount of visible &menu-items should be 7
-      | &menu-items are placed above each other with ~ 7px margin
+      | amount of visible &nav-menu-items should be 7 to 8
+      | &nav-menu-items are placed above each other with ~ 7px margin
       body.menu.nav_menu:
         above body.menu.search ~ 46px
       body.menu.search:
         above body.menu.archive ~ 46px
-      | &text-blocks are placed above each other with ~ 70px margin
+      | &text-blocks are placed above each other with 55 to 70px margin
       body.about_donnu_block.img:
         left-of body.about_donnu_block.text-block-1 ~ 54px
         height 331px

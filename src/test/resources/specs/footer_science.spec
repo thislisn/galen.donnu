@@ -11,6 +11,8 @@
     (info-block, info-blocks)     footer.info.info-block-*
     (info-text, info-texts)       footer.info.info-text-*
 
+@set
+    no_margin   ~ 0px margin
 
 = Content =
     = footer =
@@ -23,12 +25,11 @@
         | amount of visible &info-blocks should be 2
         | amount of visible &info-texts should be 3
 
-
     @on desktop
-        | footer.info.info-block-1 should be located at the left inside footer.info with ~0px margin
-        | footer.info.info-block-2 should be located at the right inside footer.info with ~0px margin
+        | footer.info.info-block-1 should be located at the left inside footer.info with ${no_margin}
+        | footer.info.info-block-2 should be located at the right inside footer.info with ${no_margin}
 
 
     @on tablet, mobile
-        | &info-blocks are placed above each other with ~ 0px margin
+        | &info-blocks are placed above each other with ${no_margin}
 
