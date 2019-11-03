@@ -1,0 +1,130 @@
+@lib galen-extras
+
+= Skeleton =
+    | header, body, footer are aligned vertically above each other with 0px margin
+
+    footer:
+        inside screen 2px bottom, 0px left right
+
+    header, body, footer:
+        centered horizontally inside screen 1px
+
+    header:
+        inside screen 0px top left right
+
+    body:
+        inside screen 0px left right
+
+= header elements =
+    | header.menu-with-submenu-1, header.menu-with-submenu-2, header.menu-with-submenu-3, header.menu-with-submenu-4, header.menu-with-submenu-5, header.menu-with-submenu-6, header.menu-item-7, header.menu-item-8 are aligned horizontally next to each other with ~4px margin
+
+    header.menu-with-submenu-2, header.menu-with-submenu-3, header.menu-with-submenu-4, header.menu-with-submenu-5, header.menu-with-submenu-6, header.menu-item-7:
+        inside header.menu 0px top bottom
+
+    header.menu-item-7:
+        width 85px
+
+    header.menu-item-8:
+        inside header.menu 0px top right bottom
+        width 21px
+
+    header.menu, header.menu-with-submenu-1, header.menu-with-submenu-2, header.menu-with-submenu-3, header.menu-with-submenu-4, header.menu-with-submenu-5, header.menu-with-submenu-6, header.menu-item-7, header.menu-item-8:
+        height 54px
+
+    header.logo:
+        height 75px
+        inside header 33px left, 9px top, 10px bottom
+        left-of header.menu
+
+    header.menu-with-submenu-1:
+        inside header.menu 0px top left bottom
+
+    header.menu:
+        inside header 40px top, 0px bottom
+        left-of header.search 23px
+
+    header.search:
+        height 0px
+        inside header 43px top, 51px bottom, 30px right
+        width 18px
+
+= body elements =
+    | body.menu.nav_menu, body.menu.search, body.menu.archive are aligned vertically above each other with ~47px margin
+
+    body.about_donnu_block.img:
+        above body.about_donnu_block.text-block-2
+        inside body.about_donnu_block 0px left
+        left-of body.about_donnu_block.text-block-1 55px
+
+    body.menu.search:
+        height 40px
+
+    body.menu.archive:
+        height 28px
+
+    body.menu:
+        inside body 50px top bottom
+        right-of body.about_donnu_block 55px
+
+    body.about_donnu_block:
+        inside body 50px top, >= 50px bottom
+
+    body.about_donnu_block.text-block-1:
+        above body.about_donnu_block.text-block-2 55px
+        inside body.about_donnu_block 0px right
+
+    body.about_donnu_block.title, body.about_donnu_block.text-block-2:
+        centered horizontally inside body.about_donnu_block 1px
+
+    body.about_donnu_block.text-block-2:
+        inside body.about_donnu_block 28px bottom, 0px left right
+
+    body.menu.search, body.menu.archive:
+        inside body.menu 0px right, 31px left
+
+    body.menu.nav_menu:
+        inside body.menu 28px top, 0px right, 31px left
+
+    body.about_donnu_block.img, body.about_donnu_block.text-block-1:
+        below body.about_donnu_block.title 55px
+
+    body.about_donnu_block.title:
+        height 36px
+        inside body.about_donnu_block 27px top, 0px left right
+
+= footer elements =
+    | footer.info.info-block-* are aligned horizontally next to each other with 0px margin
+    | footer.info.copyright, footer.info.info-text-1 are aligned vertically above each other with 1px margin
+    | footer.info.info-text-2, footer.info.info-text-3 are aligned vertically above each other with 24px margin
+
+    footer.info.info-text-3:
+        inside footer.info.info-block-2 0px left right bottom
+
+    footer.info.info-text-2:
+        inside footer.info.info-block-2 24px top, 0px left right
+
+    footer.info:
+        centered horizontally inside footer 1px
+        inside footer 5px bottom, 15px top
+
+    footer.info.copyright, footer.info.info-text-1:
+        centered horizontally inside footer.info.info-block-1 1px
+
+    footer.info.info-block-2:
+        inside footer.info 0px top right, 10px bottom
+
+    footer.info.copyright:
+        height 23px
+        inside footer.info.info-block-1 0px top left right
+
+    footer.info.info-text-1:
+        height 71px
+        inside footer.info.info-block-1 0px left right, 47px bottom
+
+    footer.info.info-block-1:
+        inside footer.info 0px top left, 10px bottom
+
+    footer.info.info-text-2, footer.info.info-text-3:
+        centered horizontally inside footer.info.info-block-2 1px
+        height 47px
+

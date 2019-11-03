@@ -1,0 +1,252 @@
+@lib galen-extras
+
+= Skeleton =
+    | header, stud-rada-slide are aligned vertically above each other with 0px margin
+    | stud-rada-slide, footer are aligned vertically above each other with -343px margin
+    | footer, footer.bottom are aligned vertically above each other with -104px margin
+
+    footer, footer.bottom:
+        above team
+
+    footer.bottom:
+        below stud-rada-slide 35px
+
+    footer:
+        below header 57px
+
+    header:
+        inside screen 0px top left right
+
+    header, stud-rada-slide, footer, footer.bottom, team:
+        centered horizontally inside screen 1px
+
+    team:
+        inside screen 41px left right
+
+    stud-rada-slide, footer, footer.bottom:
+        inside screen 0px left right
+
+= header elements =
+    | header.donnu-logo should be squared with 69px size
+
+    header.menu-item-7:
+        below header.menu-item-2 0px
+        left-of header.menu-item-8 1px
+        right-of header.menu-item-6 1px
+
+    header.menu-item-8:
+        below header.menu-item-3 0px
+        left-of header.menu-item-9 1px
+
+    header.menu-item-5:
+        above header.menu-item-10 0px
+        inside header.menu 0px top right
+        right-of header.menu-item-4 1px
+
+    header.menu-item-6:
+        below header.menu-item-1 0px
+        inside header.menu 0px left bottom
+
+    header.menu-item-1, header.menu-item-2, header.menu-item-3, header.menu-item-4, header.menu-item-5:
+        height 86px
+
+    header.menu-item-12, header.menu-item-13:
+        right-of header.menu 54px
+        width 16px
+
+    header.menu-item-9:
+        below header.menu-item-4 0px
+        left-of header.menu-item-10 1px
+
+    header.menu-item-13:
+        above header.menu-item-11 30px
+        below header.menu-item-12 29px
+        inside header
+
+    header.menu-item-12:
+        inside header 15px top
+
+    header.menu-item-11:
+        inside header 37px bottom
+        right-of header.menu 5px
+
+    header.menu-item-10:
+        inside header.menu 0px right bottom
+
+    header.menu-item-3:
+        left-of header.menu-item-4 1px
+        right-of header.menu-item-2 1px
+
+    header.menu-item-3, header.menu-item-8:
+        centered horizontally inside header.menu 1px
+
+    header.menu-item-1:
+        inside header.menu 0px top left
+        left-of header.menu-item-2 1px
+
+    header.menu-item-7, header.menu-item-8, header.menu-item-9:
+        inside header.menu 0px bottom
+
+    header.menu-item-2, header.menu-item-3, header.menu-item-4:
+        inside header.menu 0px top
+
+    header.donnu-logo:
+        inside header 56px bottom, 55px top
+        left-of header.menu 28px
+
+    header.menu-item-6, header.menu-item-7, header.menu-item-8, header.menu-item-9, header.menu-item-10:
+        height 64px
+
+    header.menu-item-11, header.menu-item-12, header.menu-item-13:
+        height 23px
+
+    header.menu:
+        inside header 15px top bottom
+
+= stud-rada-slide elements =
+    footer.widgets.widget-title-4:
+        centered horizontally inside footer.widgets.nav-widget-4 1px
+        inside footer.widgets.nav-widget-4 15px left right
+
+    footer.widgets.widget-title-1, footer.widgets.widget-title-4:
+        height 24px
+
+    stud-rada-slide.img:
+        inside stud-rada-slide 50px bottom, 56px right
+
+    footer.widgets.text-widget.text:
+        centered horizontally inside footer.widgets.text-widget 1px
+        inside footer.widgets.text-widget 0px top left right
+
+    footer.widgets.widget-title-3:
+        centered horizontally inside footer.widgets.nav-widget-3 1px
+        inside footer.widgets.nav-widget-3 15px left right
+
+    stud-rada-slide.text:
+        height 40px
+        inside footer.widgets 39px left, >= 0px top, >= 10px bottom
+
+    footer.widgets.widget-title-2:
+        centered horizontally inside footer.widgets.nav-widget-2 1px
+        inside footer.widgets.nav-widget-2 15px left right
+
+    footer.widgets.widget-title-1:
+        centered horizontally inside footer.widgets.nav-widget-1 1px
+        inside footer.widgets.nav-widget-1 15px left right
+
+    footer.widgets.nav-widget-4:
+        inside stud-rada-slide 1px right, >= 7px bottom
+        right-of footer.widgets.nav-widget-1
+
+    footer.widgets.nav-widget-3:
+        inside footer.widgets 53px bottom, 0px top
+        right-of footer.widgets.text-widget 15px
+
+    footer.widgets.nav-widget-2:
+        inside footer.widgets 0px top, 10px bottom, >= 39px left
+        left-of footer.widgets.text-widget 16px
+
+    footer.widgets.nav-widget-1:
+        inside stud-rada-slide 41px bottom, 0px left
+        left-of stud-rada-slide.img
+
+    footer.widgets.text-widget:
+        centered horizontally inside footer.widgets 1px
+        inside footer.widgets 0px top, >= 10px bottom
+
+    footer.widgets.widget-title-2, footer.widgets.widget-title-3:
+        height 48px
+
+    footer.widgets.text-widget.img:
+        centered horizontally inside footer.widgets.text-widget.text 1px
+        inside footer.widgets.text-widget.text 0px top bottom
+
+    footer.widgets:
+        centered horizontally inside stud-rada-slide 1px
+        inside stud-rada-slide 7px bottom, 15px left right
+
+= footer.bottom elements =
+    | footer.bottom.social.logo-* are aligned horizontally next to each other with ~37px margin
+    | footer.bottom.social.logo-1 should be squared with 16px size
+    | footer.bottom.social.logo-5 should be squared with 16px size
+
+    footer.bottom.social:
+        height 45px
+        inside footer.bottom 30px top bottom, 31px right
+        right-of footer.bottom.copyrights 0px
+
+    footer.bottom.social.logo-5:
+        inside footer.bottom.social 12px top, 16px right, 17px bottom
+
+    footer.bottom.social.logo-1, footer.bottom.social.logo-2, footer.bottom.social.logo-3, footer.bottom.social.logo-4:
+        inside footer.bottom.social 12px top, 17px bottom
+
+    footer.bottom.social.logo-2, footer.bottom.social.logo-3, footer.bottom.social.logo-4:
+        height 16px
+
+    footer.bottom.social.logo-2:
+        width 9px
+
+    footer.bottom.copyrights:
+        height 20px
+        inside footer.bottom 43px bottom, 42px top, 35px left
+
+    footer.bottom.social.logo-3:
+        width 13px
+
+    footer.bottom.social.logo-4:
+        width 14px
+
+= team elements =
+    | team.box-1, team.box-2, team.box-3 are aligned vertically above each other with ~35px margin
+    | team.box-4, team.box-5, team.box-6 are aligned vertically above each other with ~35px margin
+    | team.box-7, team.box-8, team.box-9 are aligned vertically above each other with 36px margin
+
+    team.box-7, team.box-8, team.box-9:
+        centered horizontally inside team.column-3 1px
+
+    team.box-1, team.box-2, team.box-3:
+        centered horizontally inside team.column-1 1px
+
+    team.box-1:
+        inside team.column-1 15px left right, 0px top
+
+    team.box-2:
+        inside team.column-1 15px left right
+
+    team.column-3:
+        inside team 0px right bottom
+        right-of team.column-2 0px
+
+    team.column-2:
+        centered horizontally inside team 1px
+        inside team 30px bottom
+        right-of team.column-1 0px
+
+    team.column-1:
+        inside team 0px left, 21px bottom
+
+    team.box-4, team.box-5, team.box-6:
+        centered horizontally inside team.column-2 1px
+
+    team.box-3:
+        inside team.column-1 15px left right, 35px bottom
+
+    team.box-4:
+        inside team.column-2 15px left right, 0px top
+
+    team.box-5:
+        inside team.column-2 15px left right
+
+    team.box-6:
+        inside team.column-2 15px left right, 36px bottom
+
+    team.box-7:
+        inside team.column-3 15px left right, 0px top
+
+    team.box-8:
+        inside team.column-3 15px left right
+
+    team.box-9:
+        inside team.column-3 15px left right, 34px bottom
+

@@ -1,0 +1,185 @@
+@lib galen-extras
+
+= Skeleton =
+    | header, stud-rada-slide are aligned vertically above each other with 0px margin
+    | team, team.column-3 are aligned vertically above each other with -770px margin
+    | team.column-3, footer are aligned vertically above each other with 0px margin
+
+    stud-rada-slide:
+        above team
+
+    footer:
+        inside screen 0px left right bottom
+
+    stud-rada-slide, team, team.column-3:
+        inside screen 0px left right
+
+    header, stud-rada-slide, team, team.column-3, footer:
+        centered horizontally inside screen 1px
+
+    team.column-3:
+        below stud-rada-slide
+
+    header:
+        inside screen 0px top left right
+
+    team:
+        above footer 1px
+
+= header elements =
+    | header.donnu-logo should be squared with 69px size
+
+    header.donnu-logo:
+        inside header 33px left, 15px top bottom
+        left-of header.ham
+
+    header.ham:
+        height 2px
+        inside header 49px bottom, 48px top, 45px right
+        width 23px
+
+= stud-rada-slide elements =
+    stud-rada-slide.img:
+        inside stud-rada-slide 0px right, >= 17px left
+
+    stud-rada-slide.text:
+        centered horizontally inside stud-rada-slide 1px
+        height 35px
+        inside stud-rada-slide 17px left, 18px right
+
+= team elements =
+    | team.column-1, team.column-2 are aligned vertically above each other with 1px margin
+    | team.box-1, team.box-2, team.box-3 are aligned vertically above each other with 36px margin
+    | team.box-4, team.box-5, team.box-6 are aligned vertically above each other with ~35px margin
+
+    team.box-4, team.box-5, team.box-6:
+        centered horizontally inside team.column-2 1px
+
+    team.box-1, team.box-2, team.box-3:
+        centered horizontally inside team.column-1 1px
+
+    team.box-1:
+        inside team.column-1 15px left right, 0px top
+
+    team.box-2:
+        inside team.column-1 15px left right
+
+    team.box-3:
+        inside team.column-1 15px left right, 34px bottom
+
+    team.box-4:
+        inside team.column-2 15px left right, 0px top
+
+    team.box-5:
+        inside team.column-2 15px left right
+
+    team.box-6:
+        inside team.column-2 15px left right, 35px bottom
+
+    team.column-1, team.column-2:
+        centered horizontally inside team 1px
+        inside team 0px left right
+
+= team.column-3 elements =
+    | team.box-7, team.box-8, team.box-9 are aligned vertically above each other with ~35px margin
+
+    team.box-7, team.box-8, team.box-9:
+        centered horizontally inside team.column-3 1px
+
+    team.box-7:
+        inside team.column-3 15px left right, 0px top
+
+    team.box-8:
+        inside team.column-3 15px left right
+
+    team.box-9:
+        inside team.column-3 15px left right, 35px bottom
+
+= footer elements =
+    | footer.widgets.nav-widget-3, footer.widgets.nav-widget-4 are aligned vertically above each other with 36px margin
+    | footer.widgets.nav-widget-4, footer.bottom are aligned vertically above each other with 56px margin
+    | footer.bottom.social, footer.bottom.copyrights are aligned vertically above each other with 15px margin
+    | footer.bottom.social.logo-* are aligned horizontally next to each other with ~37px margin
+    | footer.bottom.social.logo-1 should be squared with 16px size
+    | footer.bottom.social.logo-5 should be squared with 16px size
+
+    footer.bottom:
+        below footer.widgets 21px
+        inside footer 0px left right bottom
+
+    footer.widgets.widget-title-1, footer.widgets.widget-title-2, footer.widgets.widget-title-3, footer.widgets.widget-title-4:
+        height 24px
+
+    footer.widgets.widget-title-4:
+        centered horizontally inside footer.widgets.nav-widget-4 1px
+        inside footer.widgets.nav-widget-4 15px left right, 0px top
+
+    footer.widgets.nav-widget-1, footer.widgets.nav-widget-2, footer.widgets.nav-widget-3, footer.widgets.nav-widget-4, footer.bottom, footer.widgets:
+        centered horizontally inside footer 1px
+
+    footer.bottom.social:
+        height 50px
+        inside footer.bottom 15px top, 35px left right
+
+    footer.bottom.social.logo-1, footer.bottom.social.logo-2, footer.bottom.social.logo-3, footer.bottom.social.logo-4, footer.bottom.social.logo-5:
+        inside footer.bottom.social 22px bottom, 12px top
+
+    footer.widgets.text-widget.text:
+        centered horizontally inside footer.widgets.text-widget 1px
+        inside footer.widgets.text-widget 0px top left right
+
+    footer.bottom.social.logo-2, footer.bottom.social.logo-3, footer.bottom.social.logo-4:
+        height 16px
+
+    footer.widgets.widget-title-3:
+        centered horizontally inside footer.widgets.nav-widget-3 1px
+        inside footer.widgets.nav-widget-3 15px left right, 0px top
+
+    footer.widgets.widget-title-2:
+        centered horizontally inside footer.widgets.nav-widget-2 1px
+        inside footer.widgets.nav-widget-2 15px left right, 0px top
+
+    footer.bottom.social.logo-2:
+        width 9px
+
+    footer.widgets.widget-title-1:
+        centered horizontally inside footer.widgets.nav-widget-1 1px
+        inside footer.widgets.nav-widget-1 15px left right, 0px top
+
+    footer.bottom.social.logo-3:
+        centered horizontally inside footer.bottom.social 1px
+        width 13px
+
+    footer.bottom.social.logo-4:
+        width 14px
+
+    footer.widgets.nav-widget-3:
+        below footer.widgets.nav-widget-2
+
+    footer.widgets.nav-widget-2:
+        below footer.widgets.nav-widget-1 35px
+
+    footer.widgets.nav-widget-1:
+        inside footer 0px left right, 30px top
+
+    footer.widgets.text-widget:
+        centered horizontally inside footer.widgets 1px
+        inside footer.widgets 0px left right
+
+    footer.bottom.social, footer.bottom.copyrights:
+        centered horizontally inside footer.bottom 1px
+
+    footer.widgets.nav-widget-2, footer.widgets.nav-widget-3, footer.widgets.nav-widget-4:
+        inside footer 0px left right
+
+    footer.widgets.text-widget.img:
+        centered horizontally inside footer.widgets.text-widget.text 1px
+        inside footer.widgets.text-widget.text 0px top bottom
+
+    footer.bottom.copyrights:
+        height 40px
+        inside footer.bottom 15px bottom, 35px left right
+
+    footer.widgets:
+        inside footer 15px left right, 30px top
+

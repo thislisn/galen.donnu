@@ -1,0 +1,103 @@
+@lib galen-extras
+
+= Skeleton =
+    | header, body, footer are aligned vertically above each other with ~0px margin
+
+    header, body, footer:
+        centered horizontally inside screen 1px
+
+    footer:
+        inside screen 1px bottom, 0px left right
+
+    header:
+        height 80px
+        inside screen 0px top left right
+
+    body:
+        inside screen 0px left right, >= 0px top
+
+= header elements =
+    header.logo:
+        height 43px
+        inside header 18px top, 19px bottom, 45px left
+        left-of header.search
+
+    header.ham:
+        height 56px
+        inside header 42px right, 24px top, 0px bottom
+        right-of header.logo
+        width 32px
+
+    header.search:
+        height 0px
+        inside header 24px top, 56px bottom
+        left-of header.ham 35px
+        width 18px
+
+= body elements =
+    | body.about_donnu_block, body.menu are aligned vertically above each other with 30px margin
+    | body.about_donnu_block.title, body.about_donnu_block.img are aligned vertically above each other with 60px margin
+    | body.about_donnu_block.img, body.about_donnu_block.text-block-1 are aligned vertically above each other with 30px margin
+    | body.about_donnu_block.text-block-* are aligned vertically above each other with 60px margin
+
+    body.about_donnu_block.title, body.about_donnu_block.img, body.about_donnu_block.text-block-1, body.about_donnu_block.text-block-2:
+        centered horizontally inside body.about_donnu_block 1px
+
+    body.menu:
+        height 0px
+        inside body 43px right, 42px left, 50px bottom
+
+    body.about_donnu_block:
+        inside body 43px right, 42px left, 50px top
+
+    body.about_donnu_block, body.menu:
+        centered horizontally inside body 1px
+
+    body.about_donnu_block.text-block-2:
+        inside body.about_donnu_block 0px left right, 30px bottom
+
+    body.about_donnu_block.img, body.about_donnu_block.text-block-1:
+        inside body.about_donnu_block 0px left right
+
+    body.about_donnu_block.title:
+        height 28px
+        inside body.about_donnu_block 0px left right, 30px top
+
+= footer elements =
+    | footer.info.info-block-1, footer.info.info-text-1 are aligned vertically above each other with -118px margin
+    | footer.info.info-text-1, footer.info.info-block-2 are aligned vertically above each other with 0px margin
+    | footer.info.info-text-2, footer.info.info-text-3 are aligned vertically above each other with 24px margin
+
+    footer.info.info-text-3:
+        inside footer.info.info-block-2 0px left right bottom
+
+    footer.info.info-text-2:
+        inside footer.info.info-block-2 24px top, 0px left right
+
+    footer.info:
+        centered horizontally inside footer 1px
+        inside footer 43px right, 42px left, 5px bottom, 15px top
+
+    footer.info.info-block-1, footer.info.info-text-1, footer.info.info-block-2:
+        centered horizontally inside footer.info 1px
+
+    footer.info.info-block-2:
+        inside footer.info 0px left right, 10px bottom
+
+    footer.info.copyright:
+        centered horizontally inside footer.info.info-block-1 1px
+        inside footer.info.info-block-1 0px top left right
+
+    footer.info.info-text-1:
+        inside footer.info 0px left right, 48px top
+
+    footer.info.info-block-1:
+        above footer.info.info-block-2 1px
+        inside footer.info 0px top left right
+
+    footer.info.copyright, footer.info.info-text-2, footer.info.info-text-3:
+        height 47px
+
+    footer.info.info-text-2, footer.info.info-text-3:
+        centered horizontally inside footer.info.info-block-2 1px
+
