@@ -1,4 +1,5 @@
 @import galen-extras/galen-extras-rules.gspec
+@import common.spec
 
 @objects
     header                  css #page-container #main-header
@@ -31,6 +32,8 @@
         header.logo:
              height 74px
              width 174px
+        header:
+            image file ${dumps_ds}\header.png, error 3%, tolerance 80, ignore-objects header.menu, stretch
 
     @on tablet
         | header.logo should be located at the left inside header with ~75px margin

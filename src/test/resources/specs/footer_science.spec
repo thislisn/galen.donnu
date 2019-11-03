@@ -1,4 +1,5 @@
 @import galen-extras/galen-extras-rules.gspec
+@import common.spec
 
 @objects
     footer                 css   footer#main-footer
@@ -10,9 +11,6 @@
 @groups
     (info-block, info-blocks)     footer.info.info-block-*
     (info-text, info-texts)       footer.info.info-text-*
-
-@set
-    no_margin   ~ 0px margin
 
 = Content =
     = footer =

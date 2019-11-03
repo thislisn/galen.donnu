@@ -1,4 +1,5 @@
 @import galen-extras/galen-extras-rules.gspec
+@import common.spec
 
 @objects
     header              header.site-header.main-header
@@ -33,6 +34,8 @@
         @for [1 - 4, 6 - 9] as index
                 header.menu-item-${index}:
                     left-of header.menu-item-${index + 1} ~ 0px
+        header:
+            image file ${dumps_dm}\header.png, error 2%, tolerance 80, ignore-objects header.menu, stretch
 
     @on tablet
         | header.ham should be located at the right inside header with ~69px margin

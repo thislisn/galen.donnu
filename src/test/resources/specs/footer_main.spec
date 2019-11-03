@@ -1,4 +1,5 @@
 @import galen-extras/galen-extras-rules.gspec
+@import common.spec
 
 @objects
     footer                     footer#footer
@@ -16,9 +17,6 @@
 
 @groups
     (widget-title, widget-titles)       footer.widgets.widget-title-*
-
-@set
-    no_margin   ~ 0px margin
 
 = Content =
     = footer =
