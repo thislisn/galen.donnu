@@ -35,7 +35,7 @@
                 header.menu-item-${index}:
                     left-of header.menu-item-${index + 1} ~ 0px
         header:
-            image file ${dumps_dm}\header.png, error 2%, tolerance 80, ignore-objects header.menu, stretch
+            image file ${dumps_dm}\header.png, error 2%, tolerance 80, ignore-objects header.menu, stretch, map-filter denoise 2
 
     @on tablet
         | header.ham should be located at the right inside header with ~69px margin

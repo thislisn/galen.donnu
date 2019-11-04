@@ -33,7 +33,7 @@
              height 74px
              width 174px
         header:
-            image file ${dumps_ds}\header.png, error 3%, tolerance 80, ignore-objects header.menu, stretch
+            image file ${dumps_ds}\header.png, error 2%, tolerance 80, ignore-objects header.menu, stretch, map-filter denoise 2
 
     @on tablet
         | header.logo should be located at the left inside header with ~75px margin

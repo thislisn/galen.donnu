@@ -27,7 +27,7 @@
         stud-rada-slide.text:
             inside stud-rada-slide ~ 225px top, ~ 53px left
         stud-rada-slide:
-            image file ${dumps_dm}\stud-rada-slide.png, error 2%, tolerance 80, ignore-objects stud-rada-slide.text, stretch
+            image file ${dumps_dm}\stud-rada-slide.png, error 2%, tolerance 80, ignore-objects stud-rada-slide.text, stretch, map-filter denoise 2
 
     @on tablet
         stud-rada-slide.img:

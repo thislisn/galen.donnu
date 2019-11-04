@@ -34,7 +34,7 @@
         left-of body.about_donnu_block.text-block-1 ~ 54px
         height 331px
         width 341px
-        image file ${dumps_ds}\body.about_donnu_block.img.png, error 11%, tolerance 100, stretch
+        image file ${dumps_ds}\body.about_donnu_block.img.png, error 5%, tolerance 100, stretch, map-filter denoise 3
       body.about_donnu_block.title:
         above body.about_donnu_block.img ~ 54px
 
