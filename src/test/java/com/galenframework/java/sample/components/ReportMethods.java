@@ -14,7 +14,7 @@ import java.util.Map;
 import static org.testng.Assert.fail;
 
 @Slf4j
-public class BaseMethods extends GalenTestBase {
+public class ReportMethods extends GalenTestBase {
     protected GalenScenario galenScenario = GalenScenario.getInstance();
     protected static final String IMG_DIFF_PATH = loadSystemPropertyOrDefault("imgDiff",
             System.getProperty("user.dir") + "/target/results-img/");
