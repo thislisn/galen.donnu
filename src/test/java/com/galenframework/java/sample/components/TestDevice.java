@@ -5,7 +5,7 @@ import org.openqa.selenium.Dimension;
 
 import java.util.List;
 
-    @Data
+@Data
 public class TestDevice {
     private final String name;
     private final Dimension screenSize;

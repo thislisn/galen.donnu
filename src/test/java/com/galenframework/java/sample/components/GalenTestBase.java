@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
 import java.io.File;
 
 import static java.lang.String.format;
-import static java.lang.System.*;
+import static java.lang.System.getProperty;
 import static java.util.Collections.singletonList;
 
 public abstract class GalenTestBase extends GalenTestNgTestBase {
@@ -46,7 +46,7 @@ public abstract class GalenTestBase extends GalenTestNgTestBase {
         return getProperty("user.dir").concat(format(LOCAL_PATH_MASK, domain.name, local.name, uri));
     }
 
-    protected String getProductionUrl(LOCAL local, String uri, Domain domain){
+    protected String getProductionUrl(LOCAL local, String uri, Domain domain) {
         return format(URL_MASK, domain.name, local.name, uri);
     }
 
