@@ -1,0 +1,195 @@
+{
+  "title": "Про ДонНУ | Наука в ДонНУ",
+  "items": {
+    "footer.info.info-text-3": {
+      "area": [
+        42,
+        2530,
+        337,
+        47
+      ],
+      "hasImage": true
+    },
+    "footer.info.info-text-2": {
+      "area": [
+        42,
+        2459,
+        337,
+        47
+      ],
+      "hasImage": true
+    },
+    "footer.info": {
+      "area": [
+        42,
+        2268,
+        337,
+        319
+      ],
+      "hasImage": true
+    },
+    "body.about_donnu_block": {
+      "area": [
+        42,
+        129,
+        337,
+        2044
+      ],
+      "hasImage": true
+    },
+    "footer": {
+      "area": [
+        0,
+        2253,
+        422,
+        339
+      ],
+      "hasImage": true
+    },
+    "footer.info.info-text-1": {
+      "area": [
+        42,
+        2316,
+        337,
+        119
+      ],
+      "hasImage": true
+    },
+    "body.about_donnu_block.text-block-1": {
+      "area": [
+        42,
+        605,
+        337,
+        385
+      ],
+      "hasImage": true
+    },
+    "screen": {
+      "area": [
+        0,
+        0,
+        422,
+        2593
+      ],
+      "hasImage": true
+    },
+    "footer.info.info-block-1": {
+      "area": [
+        42,
+        2268,
+        337,
+        166
+      ],
+      "hasImage": true
+    },
+    "body.about_donnu_block.text-block-2": {
+      "area": [
+        42,
+        1050,
+        337,
+        1093
+      ],
+      "hasImage": true
+    },
+    "body": {
+      "area": [
+        0,
+        79,
+        422,
+        2174
+      ],
+      "hasImage": true
+    },
+    "header.search": {
+      "area": [
+        295,
+        24,
+        18,
+        0
+      ],
+      "hasImage": true
+    },
+    "body.about_donnu_block.img": {
+      "area": [
+        42,
+        247,
+        337,
+        328
+      ],
+      "hasImage": true
+    },
+    "body.menu": {
+      "area": [
+        42,
+        2203,
+        337,
+        0
+      ],
+      "hasImage": true
+    },
+    "header.logo": {
+      "area": [
+        45,
+        18,
+        100,
+        43
+      ],
+      "hasImage": true
+    },
+    "footer.info.info-block-2": {
+      "area": [
+        42,
+        2435,
+        337,
+        142
+      ],
+      "hasImage": true
+    },
+    "viewport": {
+      "area": [
+        0,
+        0,
+        422,
+        720
+      ],
+      "hasImage": true
+    },
+    "footer.info.copyright": {
+      "area": [
+        42,
+        2268,
+        337,
+        47
+      ],
+      "hasImage": true
+    },
+    "header": {
+      "area": [
+        0,
+        0,
+        422,
+        80
+      ],
+      "hasImage": true
+    },
+    "header.ham": {
+      "area": [
+        348,
+        24,
+        32,
+        56
+      ],
+      "hasImage": true
+    },
+    "body.about_donnu_block.title": {
+      "area": [
+        42,
+        159,
+        337,
+        28
+      ],
+      "hasImage": true
+    }
+  },
+  "pageName": "https://science.donnu.edu.ua/uk/pro-donnu/"
+}

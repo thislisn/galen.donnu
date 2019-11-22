@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Galen Page Dump</title>
+    <link rel="stylesheet" type="text/css" href="galen-report.css"/>
+    <script src="vue.js"></script>
+    <script src="galen-report.js"></script>
+    <script>
+            var pageData = {"title":"����������� ���� | ��������� ������������ ���������� ���� ������ �����","items":{"footer.bottom":{"area":[0,5204,422,135],"hasImage":true},"footer.widgets.widget-title-4":{"area":[15,5024,392,24],"hasImage":true},"stud-rada-slide.img":{"area":[202,186,220,220],"hasImage":true},"footer":{"area":[0,4257,422,1082],"hasImage":true},"footer.bottom.social":{"area":[35,5219,352,50],"hasImage":true},"screen":{"area":[0,0,422,5339],"hasImage":true},"footer.widgets.widget-title-3":{"area":[15,4864,392,24],"hasImage":true},"footer.widgets.widget-title-2":{"area":[15,4446,392,24],"hasImage":true},"footer.widgets.widget-title-1":{"area":[15,4287,392,24],"hasImage":true},"footer.widgets.text-widget":{"area":[15,4606,392,213],"hasImage":true},"header.donnu-logo":{"area":[33,15,69,69],"hasImage":true},"team.box-3":{"area":[15,2457,392,232],"hasImage":true},"team.box-4":{"area":[15,2724,392,222],"hasImage":true},"team.box-5":{"area":[15,2982,392,211],"hasImage":true},"team.box-6":{"area":[15,3228,392,222],"hasImage":true},"team.box-7":{"area":[15,3486,392,222],"hasImage":true},"footer.bottom.copyrights":{"area":[35,5284,352,40],"hasImage":true},"team.box-8":{"area":[15,3743,392,232],"hasImage":true},"team.box-9":{"area":[15,4011,392,211],"hasImage":true},"stud-rada-slide":{"area":[0,99,422,440],"hasImage":true},"team.box-1":{"area":[15,1974,392,189],"hasImage":true},"team.box-2":{"area":[15,2199,392,222],"hasImage":true},"footer.widgets.text-widget.text":{"area":[15,4606,392,119],"hasImage":true},"footer.bottom.social.logo-5":{"area":[303,5231,16,16],"hasImage":true},"team.column-3":{"area":[0,3486,422,771],"hasImage":true},"team.column-2":{"area":[0,2724,422,761],"hasImage":true},"team":{"area":[0,1870,422,2386],"hasImage":true},"footer.bottom.social.logo-1":{"area":[103,5231,16,16],"hasImage":true},"stud-rada-slide.text":{"area":[17,362,387,35],"hasImage":true},"footer.bottom.social.logo-2":{"area":[156,5231,9,16],"hasImage":true},"footer.bottom.social.logo-3":{"area":[204,5231,13,16],"hasImage":true},"team.column-1":{"area":[0,1974,422,749],"hasImage":true},"footer.bottom.social.logo-4":{"area":[253,5231,14,16],"hasImage":true},"footer.widgets.nav-widget-4":{"area":[0,5024,422,124],"hasImage":true},"footer.widgets.nav-widget-3":{"area":[0,4864,422,124],"hasImage":true},"footer.widgets.nav-widget-2":{"area":[0,4446,422,124],"hasImage":true},"footer.widgets.nav-widget-1":{"area":[0,4287,422,124],"hasImage":true},"viewport":{"area":[0,0,422,720],"hasImage":true},"header":{"area":[0,0,422,99],"hasImage":true},"footer.widgets.text-widget.img":{"area":[147,4606,127,119],"hasImage":true},"header.ham":{"area":[354,48,23,2],"hasImage":true},"footer.widgets":{"area":[15,4287,392,896],"hasImage":true}},"pageName":"https://www.donnu.edu.ua/uk/studentska-rada/"};
+
+    </script>
+</head>
+
+<body class="page-dump">
+<div id="app">
+    <div class="page-dump-canvas-wrapper">
+        <img class="screenshot" src="page.png" v-bind:style="{left: offsetLeft, top: offsetTop}"/>
+        <svg id="canvas" v-bind:width="canvasWidth + 'px'" v-bind:height="canvasHeight + 'px'">
+            <g v-for="object in objects" v-if="searchFilter === '' || object.name.indexOf(searchFilter) >= 0">
+                <rect
+                        v-if="object.selected"
+                        v-bind:x="object.area.x + offsetLeft"
+                        v-bind:y="object.area.y + offsetTop"
+                        v-bind:width="object.area.width"
+                        v-bind:height="object.area.height"
+                        style="opacity: 0.2"
+                        v-bind:style="{'fill': '#ff8200', 'stroke-width': 0}"/>
+                <rect
+                        v-bind:class="{selected: object.selected}"
+                        v-bind:x="object.area.x + offsetLeft"
+                        v-bind:y="object.area.y + offsetTop"
+                        v-bind:width="object.area.width"
+                        v-bind:height="object.area.height"
+                        style="opacity: 0.8"
+                        v-bind:style="{'fill': 'none', 'stroke-width': 1}"/>
+                <g v-if="object.caption || object.selected">
+                    <rect
+                            v-bind:class="{selected: object.selected}"
+                            v-bind:x="object.area.x + offsetLeft"
+                            v-bind:y="object.area.y - 20 + offsetTop"
+                            v-bind:width="object.name.length * 15 + 10"
+                            v-bind:height="20"
+                            style="opacity: 0.8; stroke-width: 0; stroke: none;"
+                            v-bind:style="{fill: object.color}"/>
+                    <text
+                            v-bind:x="object.area.x + 5 + offsetLeft"
+                            v-bind:y="object.area.y - 5 + offsetTop"
+                            fill="#ffffff"
+                            font-weight="bold"
+                            font-family="helvetica"
+                            font-size="15px"
+                    >{{object.name}}
+                    </text>
+                </g>
+            </g>
+
+            <g v-for="object in objects" v-if="searchFilter === '' || object.name.indexOf(searchFilter) >= 0">
+                <rect
+                        v-on:mousedown="onObjectClick(object)"
+                        v-on:mouseover="onObjectMouseOver(object)"
+                        v-on:mouseleave="onObjectMouseOut(object)"
+                        v-bind:x="object.area.x + offsetLeft"
+                        v-bind:y="object.area.y + offsetTop"
+                        v-bind:width="object.area.width"
+                        v-bind:height="object.area.height"
+                        style="opacity: 0.0"
+                        v-bind:style="{'fill': '#ffffff'}"/>
+            </g>
+            <g class="guide" v-for="guideElements in guides">
+                <g v-for="guide in guideElements">
+                    <line class="meta-line-guide" v-if="guide.type === 'line'"
+                          v-bind:x1="guide.x1 + offsetLeft"
+                          v-bind:y1="guide.y1 + offsetTop"
+                          v-bind:x2="guide.x2 + offsetLeft"
+                          v-bind:y2="guide.y2 + offsetTop"/>
+
+                    <g v-if="guide.type === 'text'">
+                        <text class="meta-text"
+                              v-bind:x="guide.x + offsetLeft"
+                              v-bind:y="guide.y + offsetTop"
+                              v-bind:transform="guide.vertical ? 'rotate(-90,' + (guide.x + offsetLeft) + ', ' + (guide.y + offsetTop) +')': 'rotate(0)'"
+                        >{{guide.text}}
+                        </text>
+                    </g>
+                </g>
+            </g>
+
+        </svg>
+    </div>
+    <div id="page-dump-right-panel">
+        <input v-model="searchFilter" type="text" placeholder="Search ..."/>
+        <ul class="objects">
+            <li v-for="objectName in objectNames" v-if="searchFilter === '' || objectName.indexOf(searchFilter) >= 0">
+                        <span
+                                v-on:click="onObjectClick(objectsMap[objectName])"
+                                v-bind:class="{selected: objectsMap[objectName].selected}"
+                        >{{objectName}}</span>
+            </li>
+        </ul>
+    </div>
+    <div id="page-dump-top-panel">
+        <h3>{{title}} {{pageName}}</h3>
+    </div>
+    <div id="page-dump-bottom-panel">
+        <div v-if="selection.length > 0">
+            <table>
+                <tr>
+                    <td v-for="object in selection">
+                        <h4>{{object.name}}</h4>
+                        <div>
+                            width: {{object.area.width}}px,
+                            height: {{object.area.height}}px,
+                            left: {{object.area.x}},
+                            top: {{object.area.y}}
+                        </div>
+                        <div v-if="object.hasImage">
+                            <a class="link" v-bind:href="'objects/' + object.name + '.png'" target="_blank">Object
+                                Image</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+<script>renderPageDump(pageData);</script>
+</body>
+</html>
