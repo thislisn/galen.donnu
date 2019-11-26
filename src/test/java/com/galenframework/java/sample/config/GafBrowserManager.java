@@ -2,6 +2,7 @@ package com.galenframework.java.sample.config;
 
 import com.codeborne.selenide.Configuration;
 import com.galenframework.java.sample.components.TestDevice;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
