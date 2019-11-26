@@ -14,23 +14,23 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class GafBasePage {
 
-    public TopMenu getTopMenu() {
-        return Selenide.page( TopMenu.class );
-    }
-
-    public Footer getFooter() {
-        return Selenide.page( Footer.class );
-    }
-
-    public List<String> getListOfUniqueLinks() {
-        final ElementsCollection allLinksA = $$( "a" );
-
-        LinkUtils linkUtils = new LinkUtils();
-        return linkUtils.from( allLinksA ).getUnique().getLinks();
-    }
-
-    public String getAllVisibleText() {
-        return $( By.tagName( "body" ) ).getText();
-    }
+//    public TopMenu getTopMenu() {
+//        return Selenide.page( TopMenu.class );
+//    }
+//
+//    public Footer getFooter() {
+//        return Selenide.page( Footer.class );
+//    }
+//
+//    public List<String> getListOfUniqueLinks() {
+//        final ElementsCollection allLinksA = $$( "a" );
+//
+//        LinkUtils linkUtils = new LinkUtils();
+//        return linkUtils.from( allLinksA ).getUnique().getLinks();
+//    }
+//
+//    public String getAllVisibleText() {
+//        return $( By.tagName( "body" ) ).getText();
+//    }
 
 }

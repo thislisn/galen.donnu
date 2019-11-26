@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class Logo {
 
-    @FindBy( xpath = "//a[@class='navbar-brand']" )
-    private SelenideElement logo;
-
-    public void click() {
-        logo.click();
-    }
-
-    public SelenideElement getImage() {
-        return logo.$( By.xpath( "//img" ) );
-    }
+//    @FindBy( xpath = "//a[@class='navbar-brand']" )
+//    private SelenideElement logo;
+//
+//    public void click() {
+//        logo.click();
+//    }
+//
+//    public SelenideElement getImage() {
+//        return logo.$( By.xpath( "//img" ) );
+//    }
 }

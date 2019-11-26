@@ -22,39 +22,38 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class GAFGeneralStepDefinitions extends GalenTestBase {
 
-    @Given("^an open browser with GAF base url$")
-    public void anOpenBrowserWithGAFBaseUrl() {
-        Selenide.open(Configuration.baseUrl, GafBasePage.class);
-    }
-
-    @Given("^an open browser with GAF url$")
-    public void anOpenBrowserWithGAFUrl() {
-        Configuration.baseUrl = GafConfiguration.HOME_UA_PROD;
-        Selenide.open(Configuration.baseUrl, GafBasePage.class);
-    }
+//    @Given("^an open browser with GAF base url$")
+//    public void anOpenBrowserWithGAFBaseUrl() {
+//        Selenide.open(Configuration.baseUrl, GafBasePage.class);
+//    }
+//
+//    @Given("^an open browser with GAF url$")
+//    public void anOpenBrowserWithGAFUrl() {
+//        Configuration.baseUrl = GafConfiguration.HOME_UA_PROD;
+//        Selenide.open(Configuration.baseUrl, GafBasePage.class);
+//    }
 
     @Given("^open local browser with url:$")
     public void openBrowserWithUrl(DataTable dataTable) {
         Map<String, String> urlMap = dataTable.asMap(String.class, String.class);
         Configuration.browserSize = urlMap.get("resolution");
         Selenide.open(getLocalUrl(dataTable));
-
     }
 
-    @Then("^top navigation (is|is not) shown$")
-    public void topNavigationIsNotShown(String expectation) {
-        if (expectation.equals("is not")) {
-            // expect to have navigation not shown
-            GafBasePage gafBasePage = Selenide.page(GafBasePage.class);
-            assertThat(gafBasePage.getTopMenu().isShown()).
-                    as("Check if Top navigation menu is shown. Expecting to be not shown").
-                    isFalse();
-        } else {
-            // expect to have navigation shown
-            GafBasePage gafBasePage = Selenide.page(GafBasePage.class);
-            assertThat(gafBasePage.getTopMenu().isShown()).
-                    as("Check if Top navigation menu is shown. Expecting to be shown").
-                    isTrue();
-        }
-    }
+//    @Then("^top navigation (is|is not) shown$")
+//    public void topNavigationIsNotShown(String expectation) {
+//        if (expectation.equals("is not")) {
+//            // expect to have navigation not shown
+//            GafBasePage gafBasePage = Selenide.page(GafBasePage.class);
+//            assertThat(gafBasePage.getTopMenu().isShown()).
+//                    as("Check if Top navigation menu is shown. Expecting to be not shown").
+//                    isFalse();
+//        } else {
+//            // expect to have navigation shown
+//            GafBasePage gafBasePage = Selenide.page(GafBasePage.class);
+//            assertThat(gafBasePage.getTopMenu().isShown()).
+//                    as("Check if Top navigation menu is shown. Expecting to be shown").
+//                    isTrue();
+//        }
+//    }
 }

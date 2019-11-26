@@ -21,9 +21,8 @@ public class Hooks {
     public void before(Scenario scenario) {
         // Configuration.baseUrl = "https://webuat.gaf.com/en-us/"
         // set default browser website to open
-        Configuration.baseUrl = GafConfiguration.HOME_UA_PROD;
-        Configuration.startMaximized=false;
-//        Configuration.browserSize = "1280x800";
+        Configuration.baseUrl = GafConfiguration.url;
+        Configuration.startMaximized = false;
 
         // Configure browser to use using bonigarcia, that download chromeDriver.exe or some other depending on parameters
         // default browser = Chrome

@@ -1,5 +1,7 @@
 package com.galenframework.java.sample.stepDefinitions;
 
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.galenframework.api.Galen;
 import com.galenframework.java.sample.components.GalenTestBase;
 import com.galenframework.java.sample.components.TestDevice;
@@ -17,23 +19,28 @@ import org.junit.Assert;
 import java.io.IOException;
 import java.util.*;
 
+import static com.galenframework.api.Galen.checkLayout;
+import static com.galenframework.java.sample.components.GalenTestBase.SPEC_PATH_MASK;
 import static java.lang.String.format;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-public class GAFLayoutStepDefinitions extends GalenTestBase {
+public class GAFLayoutStepDefinitions {
 
     @Then("^layout suite rules is satisfied:$")
     public void layoutSuiteRulesFromGspecFile(DataTable dataTable) throws IOException {
+
         Map<String, String> deviceMap = dataTable.asMap(String.class, String.class);
         TestDevice device = GalenTestBase.getDevice(deviceMap.get("device"));
-//        LayoutReport layoutReport = Galen.checkLayout(getWebDriver(), "com/galenframework/java/sample/specs/" + galenSpecFile,
+        String galenSpecFile = deviceMap.get("spec");
+//        LayoutReport layoutReport = Galen.checkLayout(getWebDriver(), format(SPEC_PATH_MASK, galenSpecFile),
 //                Arrays.asList("mobile"));
 
-//        checkLayout(format(SPEC_PATH_MASK, deviceMap.get("spec")), device.getTags());
-//        buildReport(layoutReport, galenSpecFile);
-
-        String galenSpecFile = "studRada_main";
-        LayoutReport layoutReport = Galen.checkLayout(getDriver(), format(SPEC_PATH_MASK, galenSpecFile),
+        LayoutReport layoutReport = checkLayout(getWebDriver(), format(SPEC_PATH_MASK, galenSpecFile),
                 new SectionFilter(device.getTags(), Collections.emptyList()), new Properties(), null, null);
+
+        // import GalenJavaTestBase
+//        checkLayout(format(SPEC_PATH_MASK, deviceMap.get("spec")), device.getTags());
+
 //
         List<GalenTestInfo> tests = new LinkedList<>();
         GalenTestInfo test = GalenTestInfo.fromString(galenSpecFile);
