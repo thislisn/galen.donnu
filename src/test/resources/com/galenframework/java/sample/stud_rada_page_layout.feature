@@ -1,13 +1,14 @@
-Feature: GAF page layout verification
+Feature: page stud rada local layout verification
 
   @RunTest
-  Scenario Outline: Verification of layout on the EN
+  Scenario Outline: Verification of layout stud rada EN
     Given open local browser with url:
       | locale     | EN              |
       | url        | student-council |
       | domain     | MAIN            |
       | resolution | <resolution>    |
-    Then layout suite rules is satisfied:
+    Then stud rada header is visible
+    And layout suite rules is satisfied:
       | device | <device>      |
       | spec   | studRada_main |
     Examples:
@@ -17,13 +18,14 @@ Feature: GAF page layout verification
       | 1280x800   | desktop |
 
   @RunTest
-  Scenario Outline: Verification of layout on the UA
+  Scenario Outline: Verification of layout stud rada UA
     Given open local browser with url:
       | locale     | UA              |
       | url        | studentska-rada |
       | domain     | MAIN            |
       | resolution | <resolution>    |
-    Then layout suite rules is satisfied:
+    Then stud rada header is visible
+    And layout suite rules is satisfied:
       | device | <device>      |
       | spec   | studRada_main |
     Examples:

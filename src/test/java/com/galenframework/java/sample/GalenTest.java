@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        format = {"pretty", "html:target/cucumber", "json:target/GAFTest.json"}
+        format = {"pretty", "html:target/cucumber", "json:target/GalenTest.json"}
 )
-public class GAFTest {
+public class GalenTest {
 }

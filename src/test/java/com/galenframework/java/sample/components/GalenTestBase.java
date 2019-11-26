@@ -1,6 +1,5 @@
 package com.galenframework.java.sample.components;
 
-import com.codeborne.selenide.Configuration;
 import com.galenframework.testng.GalenTestNgTestBase;
 import cucumber.api.DataTable;
 import io.github.bonigarcia.wdm.WebDriverManager;

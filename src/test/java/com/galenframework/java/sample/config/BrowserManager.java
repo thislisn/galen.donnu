@@ -1,16 +1,15 @@
 package com.galenframework.java.sample.config;
 
-import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class GafBrowserManager {
+public class BrowserManager {
 
     static final String CHROME = "chrome";
     static final String FIREFOX = "firefox";
     static final String EDGE = "edge";
 
     public static void setup() {
-        switch (GafConfiguration.browser) {
+        switch (Configuration.browser) {
             case CHROME: {
                 WebDriverManager.chromedriver().setup();
                 break;
@@ -24,9 +23,9 @@ public class GafBrowserManager {
                 break;
             }
             default: {
-                throw new RuntimeException("Browser " + GafConfiguration.browser + " is not supported");
+                throw new RuntimeException("Browser " + Configuration.browser + " is not supported");
             }
         }
-        Configuration.browser = GafConfiguration.browser;
+        com.codeborne.selenide.Configuration.browser = Configuration.browser;
     }
 }

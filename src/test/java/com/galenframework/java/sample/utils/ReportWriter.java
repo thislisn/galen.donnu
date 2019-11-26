@@ -1,5 +1,6 @@
 package com.galenframework.java.sample.utils;
 
+
 import com.galenframework.java.sample.page.context.ScenarioContext;
 import cucumber.api.Scenario;
 
