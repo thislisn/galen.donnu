@@ -130,7 +130,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>GAF-automation-report</projectName>
+                            <projectName>Galen-automation-report</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <jsonFiles>
                                 <!-- supports wildcard or name pattern -->

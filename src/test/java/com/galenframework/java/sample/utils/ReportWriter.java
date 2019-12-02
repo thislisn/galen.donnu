@@ -29,7 +29,7 @@ public class ReportWriter {
                         "<th width=\"8%\">Status</th>" +
                         "<th width=\"70%\">Link</th>" +
                         "<th width=\"11%\">Test environment</th>" +
-                        "<th width=\"11%\">www.gaf.com</th>" +
+                        "<th width=\"11%\">https://www.donnu.edu.ua/</th>" +
                         "</tr>"
         );
 
